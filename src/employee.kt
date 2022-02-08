@@ -6,12 +6,15 @@ class employee constructor(var emp_id: Int,
         println("New employee added $first_name")
     }
 
-    fun First_Name(): String {
-        return this.first_name
+    fun Full_Name(): String {
+        var full_name: String
+        full_name = first_name + " " + last_name
+        return full_name
     }
 
-    fun change_shift(shift: Int) {
-        println("Changing Shift for " +first_name + " to: " +shift)
+    fun change_shift(new_shift: Int) {
+        println("Changing Shift for " +first_name + " to: " +new_shift.toString())
+        this.shift = new_shift
     }
 
     fun printAll() {
